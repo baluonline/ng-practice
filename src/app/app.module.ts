@@ -1,47 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
-import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { ReceipeListComponent } from './recipes/receipe-list/receipe-list.component';
-import { ReceipeDetailComponent } from './recipes/receipe-detail/receipe-detail.component';
-import { RecepeItemComponent } from './recipes/receipe-list/recepe-item/recepe-item.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { Shopping0editComponent } from './shopping-list/shopping0edit/shopping0edit.component';
-import { DirectivesComponent } from './directives/directives.component';
-import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
-import { BetterHighlighter } from './directives/better-hightlight/better-highlight.directive';
-import { UnlessDirective } from './directives/app-unless.directive';
-import { DropDownDirective } from './shared/dropdown.directive';
-
-
+import { AccountComponent } from './account/account.component';
+import { NewAccountComponent } from './new-account/new-account.component';
+import { AccountServices } from './account.services';
+import { LoggingService } from './logging.servivces';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    RecipesComponent,
-    ReceipeListComponent,
-    ReceipeDetailComponent,
-    RecepeItemComponent,
-    ShoppingListComponent,
-    Shopping0editComponent,
-    DirectivesComponent,
-    BasicHighlightDirective,
-    BetterHighlighter,
-    UnlessDirective,
-    DropDownDirective
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
